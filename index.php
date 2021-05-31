@@ -16,6 +16,18 @@ switch($ruta){
     case "logout":
         include_once "vistas/logout.php";
         break;
+    case "mostrar-curso":
+        include_once "vistas/cursos_mostrar.php";
+        break;
+    case "crear-curso":
+        include_once "vistas/cursos_guardar.php";
+        break;
+    case "actualizar-curso":
+        include_once "vistas/cursos_actualizar.php";
+        break;
+    case "eliminar-curso":
+        include_once "vistas/cursos_eliminar.php";
+        break;                      
     default:
     include_once "vistas/404.php";
 }

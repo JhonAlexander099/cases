@@ -79,7 +79,7 @@ class Curso
         try {
             $objConexion = new ConexionDB();
             $conexion = $objConexion->abrir();
-            $query = "DELETE FROM curso WHERE idcurso =$this->id";
+            $query = "DELETE FROM curso WHERE idcurso =(int)$this->id";
             $resultado = $conexion->exec($query);
             $objConexion->cerrar();
         }catch (\PDOException $e){

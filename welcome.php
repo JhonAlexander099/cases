@@ -1,9 +1,9 @@
 <?php
 
-include_once "vistas/layout/header.php";
+include_once "vistas/layout/header_sistema.php";
 session_start();
 if(!isset($_SESSION["autenticado"])){
-    header ("location: index.php?login");
+    header("location: index.php?login");
 }
 
 ?>

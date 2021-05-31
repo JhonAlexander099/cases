@@ -2,7 +2,7 @@
 use controladores\CursoControlador;
 
 include_once "config/autocarga.php";
-include_once "vistas/layout/header.php";
+include_once "vistas/layout/header_sistema.php";
 
 $cursoControlador = new CursoControlador();
 $resultado = $cursoControlador->mostrar();
@@ -22,7 +22,11 @@ foreach ($resultado as $key=>$curso) {
     "<td>".($key+1)."</td>".
     "<td>".$curso["nombre"]."</td>".
     "<td>
-        <a class='btn btn-outline-danger' href = 'vistas/cursos_eliminar.php?id=".$curso["idcurso"]."'>Eliminar</a>
+        <form method='post' action='?eliminar-curso'>
+            <input class='btn btn-outline-danger' type='submit' value='Eliminar'>
+            <input type='hidden' name='idcurso' value='".$curso["idcurso"]."'>
+        </form>
+        <a  href = '?eliminar-id=".$curso["idcurso"]."'>Eliminar</a>
         </td>
     </tr>";
 }

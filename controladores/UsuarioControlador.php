@@ -14,6 +14,7 @@ class UsuarioControlador
                 $passbd = $datosbd["password"];
             }
             if(password_verify($pass, $passbd)){
+                session_start();
                 $_SESSION["autenticado"] = 1;
                 header( "location: index.php?bienvenido");
                  

@@ -2,6 +2,8 @@
 use controladores\UsuarioControlador;
 include_once "config/autocarga.php";
 include_once "vistas/layout/header.php";
+session_start();
+session_destroy();
 ?>
 <div class="position-absolute top-50 start-50 translate-middle">
 <h1 class="h3 mb-3 fw-normal">Ingrese sus datos</h1> 
